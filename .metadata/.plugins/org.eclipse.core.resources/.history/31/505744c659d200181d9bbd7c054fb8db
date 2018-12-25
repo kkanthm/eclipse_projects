@@ -1,0 +1,134 @@
+'''
+Created on Oct 5, 2018
+
+@author: Krishnakanth M
+'''
+#from collections import Counter
+# n,m = map(int, input().split());
+# 
+# arrN = input().split();
+# 
+# arrA = set(input().split())
+# 
+# arrB = set(input().split())
+# 
+# happiness = 0;
+#import itertools
+
+#c = Counter(arrN);
+
+# for i in arrA:
+#     happiness = happiness + c[i];
+# for i in arrB:
+#     happiness = happiness - c[i];
+# print(happiness)
+# for i in arrN:
+#     print(i in arrA)
+#print(True+False-True+True+True)
+
+# n = int(input())
+# s = set(map(int, input().split()))
+# 
+# method = [s.pop, s.remove, s.discard];
+# 
+# for i in range(int(input())):
+#     string, *k = input().split();
+#     if(string=='pop'):
+#         method[0]();
+#     if(string=='remove'):
+#         method[1](int(k[0]));
+#     if(string=='discard'):
+#         method[2](int(k[0]));
+# 
+# print(sum(s))
+#from collections import Counter
+# input()
+# setA = set(map(str, input().split()));
+# 
+# input()
+# setB = set(map(str, input().split()));
+# 
+# print(len(setA.symmetric_difference(setB)));
+
+# lenA = int(input())
+# setA= set(input().split())
+# 
+# for i in range(int(input())):
+#     
+#     cmd, k = input().split();
+#     eval("setA."+cmd+'(set(input().split()))');
+# setA_int = set(map(int, setA));
+# 
+# print(sum(setA_int))
+
+# for i in range(int(input())):
+#     
+#     input()
+#     setA = set(map(str, input().split()));
+#     input()
+#     setB = set(map(str, input().split()));
+#     print(setA.issubset(setB));
+'''
+setA = set(input().split());
+res = True;
+for i in range(int(input())):
+    setB = set(input().split());
+    if(not setA.issuperset(setB)):
+        res=False;
+        break;
+    elif(setA == setB):
+        res=False;
+        break;
+        
+print(res)
+
+import math
+number = complex(input());
+
+print(math.atan2(complex(number)));
+print(abs(complex(1+2j)));
+
+import math
+a=float(input())
+b=float(input())
+angle = math.degrees(math.atan2(a,b))
+print("{}\xb0".format(round(angle)));
+
+import itertools;
+actualString, p = input().split();
+r = int(p);
+someList = [];
+for n in range(1, r+1):
+    for eachTuple in itertools.combinations(actualString,n):
+        someList.append(''.join(str(i) for i in eachTuple));
+            
+# print('\n'.join(sorted(someList)));
+
+for i in range(1,r+1):
+    tempList=[]
+    for value in someList:
+        if(value.__len__() == i):
+            tempList.append(value);
+    print('\n'.join(sorted(tempList)));
+# setA = (1,2);
+# print(''.join(str(i) for i in setA))
+#print('\n'.join(sorted(someList))); 
+
+'''
+import itertools;
+#string, r = input().split();  
+string = 'HACK';
+r = 2;
+
+#print([i for i in sorted(itertools.combinations_with_replacement(string, int(r)))])
+reqList = [];
+for eachtuple in itertools.combinations_with_replacement(string, int(r)):
+    somestr=''
+    for i in range(int(r)):
+        somestr += eachtuple[i];
+    print(sorted(somestr))
+    reqList.append(somestr);
+
+reqList.sort(key=None, reverse=False);
+print(reqList)
+# print(sorted(['AA','AC','AK','AH','CC','CK','CH','HK','KK','HH']))

@@ -1,0 +1,17 @@
+public class Data {
+	static int num_loafs = 0;
+	static Object o = new Object ();
+	
+	static void Add_Loaf () {
+		synchronized (o) {
+			num_loafs++;
+			System.out.println ("A new loaf is ready");
+		}
+	}
+	static void Eat_All_Loafs () {
+		synchronized (o) {
+			num_loafs = 0;
+			System.out.println ("Eating all loafs");
+		}
+	}
+}

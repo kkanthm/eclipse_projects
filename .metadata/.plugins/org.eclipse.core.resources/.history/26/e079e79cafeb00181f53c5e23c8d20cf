@@ -1,0 +1,11 @@
+package homework11;
+public class TestThread {
+   public static void main(String args[]) {
+	   
+      Baker baker = new Baker( "The Baker");
+      baker.start();
+      
+      Eater Eater = new Eater( "The Hungry Customer");
+      Eater.start();
+   }   
+}

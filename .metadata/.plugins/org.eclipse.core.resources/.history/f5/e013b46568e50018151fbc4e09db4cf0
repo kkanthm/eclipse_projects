@@ -1,0 +1,611 @@
+'''
+Created on Oct 5, 2018
+
+@author: Krishnakanth M
+'''
+#from collections import Counter
+# n,m = map(int, input().split());
+# 
+# arrN = input().split();
+# 
+# arrA = set(input().split())
+# 
+# arrB = set(input().split())
+# 
+# happiness = 0;
+#import itertools
+#
+
+#c = Counter(arrN);
+
+# for i in arrA:
+#     happiness = happiness + c[i];
+# for i in arrB:
+#     happiness = happiness - c[i];
+# print(happiness)
+# for i in arrN:
+#     print(i in arrA)
+#print(True+False-True+True+True)
+
+# n = int(input())
+# s = set(map(int, input().split()))
+# 
+# method = [s.pop, s.remove, s.discard];
+# 
+# for i in range(int(input())):
+#     string, *k = input().split();
+#     if(string=='pop'):
+#         method[0]();
+#     if(string=='remove'):
+#         method[1](int(k[0]));
+#     if(string=='discard'):
+#         method[2](int(k[0]));
+# 
+# print(sum(s))
+#from collections import Counter
+# input()
+# setA = set(map(str, input().split()));
+# 
+# input()
+# setB = set(map(str, input().split()));
+# 
+# print(len(setA.symmetric_difference(setB)));
+
+# lenA = int(input())
+# setA= set(input().split())
+# 
+# for i in range(int(input())):
+#     
+#     cmd, k = input().split();
+#     eval("setA."+cmd+'(set(input().split()))');
+# setA_int = set(map(int, setA));
+# 
+# print(sum(setA_int))
+
+# for i in range(int(input())):
+#     
+#     input()
+#     setA = set(map(str, input().split()));
+#     input()
+#     setB = set(map(str, input().split()));
+#     print(setA.issubset(setB));
+'''
+setA = set(input().split());
+res = True;
+for i in range(int(input())):
+    setB = set(input().split());
+    if(not setA.issuperset(setB)):
+        res=False;
+        break;
+    elif(setA == setB):
+        res=False;
+        break;
+        
+print(res)
+
+import math
+number = complex(input());
+
+print(math.atan2(complex(number)));
+print(abs(complex(1+2j)));
+
+import math
+a=float(input())
+b=float(input())
+angle = math.degrees(math.atan2(a,b))
+print("{}\xb0".format(round(angle)));
+
+import itertools;
+actualString, p = input().split();
+r = int(p);
+someList = [];
+for n in range(1, r+1):
+    for eachTuple in itertools.combinations(actualString,n):
+        someList.append(''.join(str(i) for i in eachTuple));
+            
+# print('\n'.join(sorted(someList)));
+
+for i in range(1,r+1):
+    tempList=[]
+    for value in someList:
+        if(value.__len__() == i):
+            tempList.append(value);
+    print('\n'.join(sorted(tempList)));
+# setA = (1,2);
+# print(''.join(str(i) for i in setA))
+#print('\n'.join(sorted(someList))); 
+
+
+import itertools;
+string, r = input().split();  
+reqList = [];
+for eachtuple in itertools.combinations_with_replacement(string, int(r)):
+    somestr=''
+    for i in range(int(r)):
+        somestr += eachtuple[i];
+    reqList.append(''.join(sorted(somestr)));
+print('\n'.join(sorted(reqList)))
+# print(sorted(['AA','AC','AK','AH','CC','CK','CH','HK','KK','HH']))
+
+'''
+'''
+from itertools import starmap
+numbers = [(2,5)]
+print( list(starmap(pow, numbers)));
+'''
+
+# print([(k,len(list(g))) for k,g in itertools.groupby('AAAABBBCCDAABBB')]);
+
+# for k,g in itertools.groupby(input()):
+#     print((len(list(g)), (int(k))),end=" ")
+'''
+n = int(input());
+L = input().split();
+M = [i+1 for i in range(n) if L[i] == 'a']
+O = int(input())
+P = list(itertools.combinations(range(1,n+1),O));
+
+UniqueTupleSet = set()
+
+for eachTuple in P:
+    for eachValue in M:
+        if (eachValue in eachTuple):
+            UniqueTupleSet.add(eachTuple);
+print(len(UniqueTupleSet)/len(P))
+
+
+def sumOfSquaresAndPercentile(tuple1, number):
+    sumT = 0;
+    for eachValue in tuple1:
+        sumT = sumT + pow(eachValue,2);q
+    return sumT%number;
+
+N,K = input().split();
+L = []
+ListOfPercentileValues = [];
+for _ in range(int(N)):
+    L.append(list(map(int, input().split()))[1:]);
+for eachTuple in itertools.product(*L):
+    ListOfPercentileValues.append(sumOfSquaresAndPercentile(eachTuple, int(K)))
+print(max(ListOfPercentileValues))
+
+'''
+'''
+L = [[2,5,4],[3,7,8,9],[5,5,7,8,9,10]]
+print(list(itertools.product(*L)))
+'''
+'''
+import collections
+NoOfShoes = int(input())
+AvailableSizes = list(map(int, input().rstrip().split()))
+CounterForSizes = collections.Counter(AvailableSizes);
+TotalAmount = 0;
+for i in range(int(input())):
+    size, price = map(int, input().split());
+    if(CounterForSizes[size]>=1):
+        TotalAmount = TotalAmount + price;
+        CounterForSizes[size] = CounterForSizes[size] - 1;
+print(TotalAmount)
+
+'''
+# import collections
+# n,m = map(int, input().rstrip().split());
+# 
+# A = collections.defaultdict(list)
+# 
+# for i in range(n):
+#     A[input()].append(i)
+# B = [input() for i in range(m)]
+# 
+# for eachElement in B:
+#     if eachElement in A.keys():
+#         print(" ".join(str(i+1) for i in A[eachElement]))
+#     else:
+#         print(-1);
+
+# N = int(input())
+# index1 = input().split().index('MARKS')
+# print("{0:.2f}".format(sum([int((input().split())[index1]) for i in range(N)])/N))
+
+# import collections
+# N = int(input());
+# itemList = collections.OrderedDict();
+# for i in range(N):
+#     *item, price = input().split();
+#     itemName = " ".join(item)
+#     if itemName in itemList.keys():
+#         itemList[itemName] = itemList[itemName]+int(price)
+#     else:
+#         itemList[itemName] = int(price)
+# 
+# 
+# for eachKey in itemList:
+#     print(eachKey+" "+str(itemList[eachKey]))
+
+# import collections
+# 
+# N = int(input())
+# wordList = collections.OrderedDict();
+# for i in range(N):
+#     word = input()
+#     if word in wordList.keys():
+#         wordList[word] = wordList[word] + 1;
+#     else:
+#         wordList[word] = 1;
+# print(len(wordList.keys()))
+# print(" ".join([str(wordList[i]) for i in wordList]))
+
+# import collections
+# N = int(input())
+# d = collections.deque()
+# for i in range(N):
+#     methods = input().split();
+#     if methods[0] in ['append','appendleft']:
+#         eval("d."+methods[0]+"("+methods[1]+")");
+#     else:
+#         eval("d."+methods[0]+"()");
+# print(" ".join([str(i) for i in d]))
+#import collections
+#import operator
+# s = input()
+# list1 = []
+# counterforS = collections.Counter(s);
+# for eachTuple in sorted(counterforS.most_common(), key=lambda x: (-x[1], x[0])):
+#     list1.append(" ".join([str(eachElement) for eachElement in eachTuple]))
+#     
+# for i in range(3):
+#     print(list1[i])
+'''
+import itertools
+import copy
+import collections
+
+def getPermutationsOfMethods(n):
+    comb = itertools.combinations_with_replacement(['popleft()','pop()'], n)
+    setOfPermutations = set();
+    # Print the obtained combinations 
+    for i in list(comb)[1:n]: 
+        for each in permutations(list(i)):
+            setOfPermutations.add(each)
+    return setOfPermutations
+
+N = int(input())
+for i in range(N):
+    poppedOutlengths = []
+    result = 'No'
+    n = int(input())
+    listOfSideLengths = collections.deque(map(int, input().rstrip().split()))
+    listOfSideLengthsCopy = copy.deepcopy(listOfSideLengths)
+    for eachSet in getPermutationsOfMethods(n):
+        for eachEle in eachSet:
+            poppedOutlengths.append(eval("listOfSideLengthsCopy."+eachEle))
+        if poppedOutlengths == sorted(listOfSideLengths,reverse=True):
+            result = 'Yes'
+            break
+        listOfSideLengthsCopy = copy.deepcopy(listOfSideLengths)
+        poppedOutlengths = []
+    
+    print(result)
+   
+
+for t in range(int(input())):
+    n = int(input())
+    lst = list(map(int, input().split()))
+    i = 0
+    while i < n - 1 and lst[i] >= lst[i+1]:
+        i += 1
+    while i < n - 1 and lst[i] <= lst[i+1]:
+        i += 1
+    print("Yes" if i == n - 1 else "No")
+    
+
+import collections
+for _ in range(int(input())):
+    length, listOfCubes = int(input()), collections.deque(map(int, input().split()))
+    
+    for eachCube in reversed(sorted(listOfCubes)):
+        if eachCube == listOfCubes[-1]:
+            listOfCubes.pop();
+        elif eachCube == listOfCubes[0]:
+            listOfCubes.popleft();
+        else:
+            print("No")
+            break;
+    else:
+        print("Yes")
+
+# for each in itertools.combinations_with_replacement(range(4),2):
+#     print(set(itertools.permutations(each)))
+
+# for each in itertools.permutations(range(4),2):
+#     print(each)
+
+def hourglassSum(arr):
+      
+    return max([arr[i][j]+arr[i][j+1]+arr[i][j+2]+arr[i+1][j+1]+arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2] for (i,j) in itertools.product(range(4),repeat=2)])
+  
+arr = []
+for _ in range(6):
+    arr.append(list(map(int, input().rstrip().split())))
+  
+result = hourglassSum(arr)
+print(result)
+
+
+def dynamicArray(n, queries):
+    lastAnswer = 0;
+    output=[]
+    seqList = []
+    for _ in range(n):
+        seqList.append([])
+    for each in queries:
+        op,x,y = each
+        
+        #print("index:"+str(index))
+        if op==1:
+            index = (x^lastAnswer)%n;
+            #print(":{}".format(index))
+            seqList[index].append(y)
+        elif op==2:
+            index = (x^lastAnswer)%n;
+            #print(":{}".format(index))
+            lastAnswer = seqList[index][y%(len(seqList[index]))]
+            #print("lastAnswer:{}".format(lastAnswer))
+            output.append(lastAnswer)
+            
+        else:
+            print("invalid input")  
+    return output 
+            
+if __name__ == '__main__':     
+    nq = input().rstrip().split()
+    
+    n = int(nq[0])
+    
+    q = int(nq[1])
+    
+    queries = []
+    
+    for _ in range(q):
+        queries.append(list(map(int, input().rstrip().split())))
+    
+    result = dynamicArray(n, queries)
+    
+    print('\n'.join(map(str, result)))
+
+
+nd = input().split()
+
+n = int(nd[0])
+
+d = int(nd[1])
+
+a = list(map(int, input().rstrip().split()))
+leftRotations = d%n
+
+for _ in range(leftRotations):
+    a.append(a.pop(0));
+print(" ".join(map(str,a)))
+
+def matchingStrings(strings, queries):
+    return [strings.count(eachString) for eachString in queries]
+strings_count = int(input())
+    
+strings = []
+
+for _ in range(strings_count):
+    strings_item = input()
+    strings.append(strings_item)
+
+queries_count = int(input())
+
+queries = []
+
+for _ in range(queries_count):
+    queries_item = input()
+    queries.append(queries_item)
+
+res = matchingStrings(strings, queries)
+
+print('\n'.join(map(str, res)))
+
+5 3
+1 2 100
+2 5 100
+3 4 100
+
+'''
+
+
+    #ar = list(map(int, list('0'*n)))
+    
+#     for i in queries:
+#         a,b,k = i;
+#         for j in range(a-1,b):
+#             ar[j] = ar[j]+k   #ar[a-1:b]:
+
+import collections
+def arrayManipulation(n, queries):
+    ar = list(map(int, list('0'*n)))
+    '''
+     my_array = [0] * (n+1)
+    count = 0
+    temp = 0
+    for first,last,value in queries:
+        
+        my_array[first-1] += value
+        my_array[last] -= value
+    
+    for item in my_array:
+        count += item
+        if count > temp:
+            temp = count
+       
+    return temp
+    '''
+#     for i in queries:
+#         a,b,k = i;
+#         for j in range(a-1,b):
+#             ar[j] = ar[j]+k 
+#     return max(ar)
+# if __name__ == '__main__':
+#     
+# 
+#     nm = input().split()
+# 
+#     n = int(nm[0])
+# 
+#     m = int(nm[1])
+# 
+#     queries = []
+# 
+#     for _ in range(m):
+#         queries.append(list(map(int, input().rstrip().split())))
+# 
+#     result = arrayManipulation(n, queries)
+# 
+#     print(str(result) + '\n')
+
+''' Please note that it's Function problem i.e.
+you need to write your solution in the form of Function(s) only.
+Driver Code to call/invoke your function is mentioned above. '''
+
+# Your task is to complete all
+# three functions
+# if the element is found in the list
+# function  must return true or else
+# return false
+# def searchEle(a, x):
+#     # Code here
+#     if x in a:
+#         return True;
+#     else:
+#         return False;
+# # fucntion must return true if 
+# # insertion is successful or else
+# # return false
+# def insertEle(a, y, yi):
+#     # Code here
+#     a.insert(yi, y)
+#     return True
+# # fucntion must return true if 
+# # deletion is successful or else
+# # return false
+# def deleteEle(a, z):
+#     # Code here
+#     if z in a:
+#         a.remove(z);
+#         return True;
+#     else:
+#         return False;
+#     
+#     
+# if __name__=='__main__':
+#     t=int(input())
+#     for _ in range(t):
+#         n = int(input())
+#         a = list(map(int, input().strip().split()))
+#         x,y,yi,z = list(map(int, input().strip().split()))
+#         if(searchEle(a, x)):
+#             print('1', end=' ')
+#         else:
+#             print('0', end=' ')
+#         if(insertEle(a, y, yi)):
+#             print('1', end=' ')
+#         else:
+#             print('0', end=' ')
+#         if(deleteEle(a, z)):
+#             print('1', end=' ')
+#         else:
+#             print('0', end=' ')
+#         print()
+# Contributed By: Harshit Sidhwa
+# def printAl(arr,n):
+#     # your code here
+#     print(" ".join(str(i) for i in arr[0:n:2]))
+# 
+# #Initial Template for Python 3
+# if __name__=="__main__":
+#     t=int(input())
+#     for i in range(t):
+#         n=int(input())
+#         arr=list(map(int,input().split()))
+#         printAl(arr,n)
+#         print()
+# 
+# 
+# 2
+# 5
+# 2 2 2 2 2 
+# 3
+# 1 2 2
+# ''' Please note that it's Function problem i.e.
+# you need to write your solution in the form of Function(s) only.
+# Driver Code to call/invoke your function is mentioned above. '''
+# 
+# #User function Template for python3
+# # arr is the array
+# # n is the number of elements in array
+# def remove_duplicate(n, arr):
+#     #Code here
+#     arr[:] = list(sorted(set(arr)));
+#     return len(arr)   
+# 
+# t = int(input());
+# for i in range(t):
+#     n = int(input())
+#     arr = list(map(int, input().strip().split()))
+#     n = remove_duplicate(n, arr)
+#     for i in range(n):
+#         print (arr[i], end=" ")
+#     print()
+
+'''
+2
+7
+1 2 3 4 5 6 7
+98
+7
+1 2 3 4 5 6 7
+8
+'''
+'''
+
+
+2
+3
+3 5 4
+5
+6 4 9 7 8
+'''
+'''
+3
+6
+16 17 4 3 5 2
+5
+1 2 3 4 0
+5
+7 4 5 7 3
+'''
+def leaders(arr,n):
+    max = arr[n-1]
+    for i in range(n-2,0)[::-1]:
+        if arr[i]
+        
+    return list();
+
+
+T = int(input());
+for i in range(T):
+    leaders = []
+    N = int(input())
+    arr = list(map(int, input().split()));
+    n= len(arr)
+    leaders_array = leaders(arr,n);
+    #print(leaders)
+    print(' '.join(map(str, leaders_array)))
+    
+
+
+  
+    

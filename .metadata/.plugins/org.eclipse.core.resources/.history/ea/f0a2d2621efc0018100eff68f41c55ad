@@ -1,0 +1,82 @@
+'''
+Created on Nov 28, 2018
+
+@author: Krishnakanth M
+'''
+
+'''
+input
+7
+6 5 8 4 7 10 9
+
+def isReverseSorted(arr):
+    i=0;
+    while i< len(arr)-1:
+        if(arr[i]<arr[i+1]):
+            return False;
+        i=i+1;
+    return True;
+
+def poisonousPlants(p):
+    iterations = 0;
+    #lengthOfArray = len(p);
+    eachTimeUpdatedList = [p[0]]
+    
+    while not isReverseSorted(p):
+        
+        for i in range(1, len(p)):
+            if(p[i]<=p[i-1]):
+                eachTimeUpdatedList.append(p[i])
+        
+        p[:]=eachTimeUpdatedList[:];
+        eachTimeUpdatedList = [p[0]]
+        
+        iterations=iterations+1;
+             
+        
+    return iterations
+
+    
+    
+n = int(input())
+
+p = list(map(int, input().rstrip().split()))
+
+result = poisonousPlants(p)
+print(result)
+'''
+#!/bin/python3
+
+
+#
+# Complete the equalStacks function below.
+#
+def equalStacks(h1, h2, h3):
+    h1.reverse();
+    h2.reverse();
+    h3.reverse();
+    
+
+
+if __name__ == '__main__':
+    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n1N2N3 = input().split()
+
+    n1 = int(n1N2N3[0])
+
+    n2 = int(n1N2N3[1])
+
+    n3 = int(n1N2N3[2])
+
+    h1 = list(map(int, input().rstrip().split()))
+
+    h2 = list(map(int, input().rstrip().split()))
+
+    h3 = list(map(int, input().rstrip().split()))
+
+    result = equalStacks(h1, h2, h3)
+
+    print(result)
+
+    #fptr.close()

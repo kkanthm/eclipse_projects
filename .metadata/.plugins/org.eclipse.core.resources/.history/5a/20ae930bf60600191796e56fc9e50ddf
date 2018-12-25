@@ -1,0 +1,53 @@
+'''
+Created on Dec 23, 2018
+
+@author: Krishnakanth M
+'''
+class Tree:
+    class Node:
+        def __init__(self, data,left=None, right=None):
+            self.data = data;
+            self.left=left;
+            self.right=right;
+    
+    def __init__(self,Node=None):
+        self.root=Node;
+
+    def insertLeft(self,data):
+        newNode = self.Node(data,None,None);
+        if self.root is None:
+            self.root = newNode;
+        
+        else:
+            if self.root.left == None:
+                self.root.left=newNode;
+            else:
+                newNode.left=self.root.left;
+                self.root.left=newNode;
+    def insertRight(self,data):
+        newNode = self.Node(data,None,None);
+        if self.root is None:
+            self.root = newNode;
+        
+        else:
+            if self.root.right == None:
+                self.root.right=newNode;
+            else:
+                newNode.right=self.root.right;
+                self.root.right=newNode;
+    def printTree(self):
+        if self.root == None:
+            return
+        else:
+            print(self.data)
+            
+            if self.root.left:
+                self.root.left.printTree();
+                
+            if self.root.right:
+                self.root.right.printTree();
+                
+        
+                
+            
+            

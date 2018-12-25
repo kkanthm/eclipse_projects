@@ -1,0 +1,11 @@
+'''
+Created on Dec 19, 2018
+@author: Krishnakanth M
+'''
+class Queue:
+    
+    def __init__(self):
+        self.q = [];
+        self.front=0;
+        self.rear=-1;
+        self.size=None;

@@ -1,0 +1,173 @@
+'''
+Created on Nov 28, 2018
+
+@author: Krishnakanth M
+'''
+
+'''
+input
+7
+6 5 8 4 7 10 9
+
+def isReverseSorted(arr):
+    i=0;
+    while i< len(arr)-1:
+        if(arr[i]<arr[i+1]):
+            return False;
+        i=i+1;
+    return True;
+
+def poisonousPlants(p):
+    iterations = 0;
+    #lengthOfArray = len(p);
+    eachTimeUpdatedList = [p[0]]
+    
+    while not isReverseSorted(p):
+        
+        for i in range(1, len(p)):
+            if(p[i]<=p[i-1]):
+                eachTimeUpdatedList.append(p[i])
+        
+        p[:]=eachTimeUpdatedList[:];
+        eachTimeUpdatedList = [p[0]]
+        
+        iterations=iterations+1;
+             
+        
+    return iterations
+
+    
+    
+n = int(input())
+
+p = list(map(int, input().rstrip().split()))
+
+result = poisonousPlants(p)
+print(result)
+'''
+#!/bin/python3
+
+
+#
+# Complete the equalStacks function below.
+#
+'''
+equal stacks
+def equalStacks(h1, h2, h3):
+    h1.reverse();
+    h2.reverse();
+    h3.reverse();
+    sum1 = sum(h1);
+    sum2 = sum(h2);
+    sum3 = sum(h3);
+    
+    while(True):
+        
+        
+        if sum1==0 or sum2==0 or sum3==0:
+            return 0;
+        
+        else:
+            
+            if(sum1==sum2==sum3):
+                return sum1;
+            
+            else:
+                maxSum= max(sum1,sum2,sum3);
+                
+                if(sum1==maxSum):
+                    sum1=sum1-h1.pop();
+                
+                if(sum2==maxSum):
+                    sum2=sum2-h2.pop();
+                
+                if(sum3==maxSum):
+                    sum3=sum3-h3.pop();
+    
+
+
+if __name__ == '__main__':
+    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n1N2N3 = input().split()
+
+    n1 = int(n1N2N3[0])
+
+    n2 = int(n1N2N3[1])
+
+    n3 = int(n1N2N3[2])
+
+    h1 = list(map(int, input().rstrip().split()))
+
+    h2 = list(map(int, input().rstrip().split()))
+
+    h3 = list(map(int, input().rstrip().split()))
+
+    result = equalStacks(h1, h2, h3)
+
+    print(result)
+
+    #fptr.close()
+    input
+1
+5 4 10
+4 2 4 6 1
+2 1 8 5
+'''
+def getTop(a):
+    if len(a)!=0:
+        return a[-1];
+    else:
+        return 0;
+def twoStacks(x, a, b):
+    
+    a.reverse();
+    b.reverse();
+    currentSum=0;
+    score=0;
+    while(currentSum<=x):
+        if not b and not a:
+            if(getTop(a)<=getTop(b)):
+                currentSum=currentSum+a.pop();
+                score=score+1;
+            else:
+                currentSum=currentSum+b.pop();
+                score=score+1;
+        else:
+            if not b:
+                currentSum=currentSum+b.pop();
+                score=score+1;
+            if not a:
+                currentSum=currentSum+a.pop();
+                score=score+1;
+                
+        
+    
+    return score-1;
+            
+        
+    
+
+if __name__ == '__main__':
+    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    g = int(input())
+
+    for g_itr in range(g):
+        nmx = input().split()
+
+        n = int(nmx[0])
+
+        m = int(nmx[1])
+
+        x = int(nmx[2])
+
+        a = list(map(int, input().rstrip().split()))
+
+        b = list(map(int, input().rstrip().split()))
+
+        result = twoStacks(x, a, b)
+
+        print(str(result) + '\n')
+
+    #fptr.close()

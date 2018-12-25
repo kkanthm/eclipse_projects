@@ -1,0 +1,84 @@
+'''
+Created on Oct 5, 2018
+
+@author: Krishnakanth M
+'''
+#from collections import Counter
+# n,m = map(int, input().split());
+# 
+# arrN = input().split();
+# 
+# arrA = set(input().split())
+# 
+# arrB = set(input().split())
+# 
+# happiness = 0;
+
+#c = Counter(arrN);
+
+# for i in arrA:
+#     happiness = happiness + c[i];
+# for i in arrB:
+#     happiness = happiness - c[i];
+# print(happiness)
+# for i in arrN:
+#     print(i in arrA)
+#print(True+False-True+True+True)
+
+# n = int(input())
+# s = set(map(int, input().split()))
+# 
+# method = [s.pop, s.remove, s.discard];
+# 
+# for i in range(int(input())):
+#     string, *k = input().split();
+#     if(string=='pop'):
+#         method[0]();
+#     if(string=='remove'):
+#         method[1](int(k[0]));
+#     if(string=='discard'):
+#         method[2](int(k[0]));
+# 
+# print(sum(s))
+#from collections import Counter
+# input()
+# setA = set(map(str, input().split()));
+# 
+# input()
+# setB = set(map(str, input().split()));
+# 
+# print(len(setA.symmetric_difference(setB)));
+
+# lenA = int(input())
+# setA= set(input().split())
+# 
+# for i in range(int(input())):
+#     
+#     cmd, k = input().split();
+#     eval("setA."+cmd+'(set(input().split()))');
+# setA_int = set(map(int, setA));
+# 
+# print(sum(setA_int))
+
+# for i in range(int(input())):
+#     
+#     input()
+#     setA = set(map(str, input().split()));
+#     input()
+#     setB = set(map(str, input().split()));
+#     print(setA.issubset(setB));
+'''
+setA = set(input().split());
+res = True;
+for i in range(int(input())):
+    setB = set(input().split());
+    if(not setA.issuperset(setB)):
+        res=False;
+        break;
+    elif(setA == setB):
+        res=False;
+        break;
+        
+print(res)
+'''
+

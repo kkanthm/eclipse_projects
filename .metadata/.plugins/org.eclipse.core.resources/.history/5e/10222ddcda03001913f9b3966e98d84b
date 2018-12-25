@@ -1,0 +1,61 @@
+'''
+Created on Dec 19, 2018
+@author: Krishnakanth M
+'''
+#Queue using Unlimited Size array
+class Queue:
+    
+    def __init__(self):
+        self.q = [];        
+        
+    def enqueue(self,data):
+        self.q.append(data);
+        
+    def dequeue(self):
+        return self.q.pop(0);
+    
+    def size(self):
+        return self.q.__len__();
+        
+    def isEmpty(self):
+        return len(self.q)==0;
+        
+# queue = Queue();
+# 
+# queue.enqueue("Alpha")
+# queue.enqueue("Beta")
+# queue.enqueue("Gamma")
+# queue.enqueue("Delta")
+# for i in range(4):
+#     print(queue.dequeue())
+'''
+Queue using fixed size array
+class Queue1:
+    def __init__(self):
+        self.q=[None]*100;
+        self.maxSize = 100
+        self.head=0;
+        self.tail=0;
+    def resetQueue(self):
+        self.head=0;
+        self.tail=0;
+        self.q=[];
+    def push(self, item):
+        if((self.tail-self.head)>=self.maxSize):
+            print("Queue is Full");
+        self.q[self.tail]=item;
+        self.tail=self.tail+1;
+    def pop(self):
+        if((self.tail-self.head)<=0):
+            self.resetQueue();
+            print("Queue is empty");
+        data = self.q[self.head];
+        self.head=self.head+1;
+        return data;
+queue1 = Queue1();
+queue1.push(1);
+queue1.push(2);
+queue1.push(3);
+queue1.push(4);
+for i in range(4):
+    print(queue1.pop());

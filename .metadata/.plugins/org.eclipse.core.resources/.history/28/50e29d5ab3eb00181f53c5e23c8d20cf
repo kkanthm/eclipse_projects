@@ -1,0 +1,44 @@
+package homework11;
+public class Baker implements Runnable {
+   private Thread t;
+   private String threadName;
+   
+   Baker( String name){
+       threadName = name;
+       System.out.println("Creating " +  threadName );
+   }
+   public void run() {
+      System.out.println("Running " +  threadName );
+      int Napple = 0;
+      int Ncherry = 0;
+      while(Napple < 4 && Ncherry < 4) {
+    	 int randomNumber =  (int)(Math.random()*2);
+    	 if(randomNumber == 0 && Ncherry < 4) {
+    		 CherryData.add_Cherry();
+    		 Ncherry++;
+    	 }
+    	 else if(randomNumber == 1 && Napple < 4){
+    		 AppleData.add_apples();
+    		 Napple++;
+    	 }
+      }
+//      while (i<10) {
+//    	if (CherryData.num_loafs < 5) {
+//    		CherryData.Add_Loaf ();
+//    		i++;
+//    	}
+//	 }
+     System.out.println("Thread " +  threadName + " exiting.");
+   }
+   
+   public void start ()
+   {
+      System.out.println("Starting " +  threadName );
+      if (t == null)
+      {
+         t = new Thread (this, threadName);
+         t.start ();
+      }
+   }
+
+}

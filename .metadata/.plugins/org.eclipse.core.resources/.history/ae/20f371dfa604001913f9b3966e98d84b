@@ -1,0 +1,22 @@
+'''
+Created on Dec 20, 2018
+
+@author: Krishnakanth M
+'''
+import collections
+T = int(input())
+for _ in range(T):
+    
+    no_of_pairs = int(input());
+    cities = list(map(int, input().split()));
+    no_of_queries = int(input());
+    list_of_all_cities = []
+    i=0;
+    while(i<no_of_pairs):
+        p=2*i;
+        q=2*i+1;
+        list_of_all_cities.append(i for i in range(p-1,q));
+    c = collections.Counter(list_of_all_cities);
+         
+        
+        

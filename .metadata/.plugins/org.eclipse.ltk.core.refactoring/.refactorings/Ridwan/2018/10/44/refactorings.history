@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;Ridwan&apos;&#x0D;&#x0A;- Original project: &apos;Ridwan&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ComplexNumber.java&#x0D;&#x0A;     ConfirmBox.java&#x0D;&#x0A;     Controller.java&#x0D;&#x0A;     Main.java" description="Delete elements" element1="/src&lt;{ComplexNumber.java" element2="/src&lt;{ConfirmBox.java" element3="/src&lt;{Controller.java" element4="/src&lt;{Main.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1540779169006" subPackages="false" version="1.0"/>
+</session>

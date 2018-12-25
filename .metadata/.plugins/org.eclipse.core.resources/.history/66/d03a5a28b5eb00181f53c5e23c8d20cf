@@ -1,0 +1,17 @@
+package homework11;
+public class TestThread {
+   public static void main(String args[]) {
+	   
+      Baker baker = new Baker( "The Baker");
+      baker.start();
+      synchronized (baker) {
+    	  CherryEater cherryEater = new CherryEater( "The Cherry Customer");
+          cherryEater.start();
+          
+          AppleEater appleEater = new AppleEater( "The Apple Customer");
+          appleEater.start();
+	}
+     
+      
+   }   
+}

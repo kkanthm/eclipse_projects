@@ -1,0 +1,74 @@
+# '''
+# Created on Oct 5, 2018
+# 
+# @author: Krishnakanth M
+# '''
+# 
+# from _py_abc import ABCMeta
+# from abc import abstractmethod
+# 
+# 
+# class Shape(object):
+#     __metaclass__ = ABCMeta;
+#     @abstractmethod
+#     def area(self):
+#         pass
+#     
+#     @abstractmethod
+#     def perimeter(self):
+#         pass
+#     
+# import math
+# 
+# class Circle(Shape):
+#     def __init__(self, r=1):
+#         self.radius = r;
+#     
+#     def area(self):
+#         return math.pi * self.radius * self.radius;
+#     
+#     def perimeter(self):
+#         return 2 * math.pi * self.radius;
+#     
+# class Rectangle(Shape):
+#     
+# #     def __init__(self):
+# #         self.length = 0;
+# #         self.breadth = 0;
+#     
+#     def area(self):
+#         return self.length * self.breadth * self.height;
+#     
+#     def perimeter(self):
+#         return 2 * (self.length+self.breadth);
+#     
+# from builtins import classmethod
+# 
+# class ShapeDemo(object):
+#     
+#     @classmethod
+#     def main(cls):
+#         radius = 4;
+#         circle = Circle(radius);
+#         rectangle = Rectangle();
+#         rectangle.length = 5;
+#         rectangle.breadth = 6;
+#         
+#         print("Rectangle Details:");
+#         print("length: {0} breadth: {1}".format(rectangle.length , rectangle.breadth));
+#         #print("Area {}".format(rectangle.area()));
+#         print("Perimeter {}".format(rectangle.perimeter()));
+#         print("="*30);
+#         
+#         print("Circle Details");
+#         print("Radius: {}".format(circle.radius));
+#         print("Area {0:.2f}".format(circle.area()));
+#         print("Perimeter {0:.2f}".format(circle.perimeter()));
+#         
+# # if __name__ == '__main__':
+# #     
+# ShapeDemo.main();
+
+for x,y in range(6):
+    print(x,y)
+

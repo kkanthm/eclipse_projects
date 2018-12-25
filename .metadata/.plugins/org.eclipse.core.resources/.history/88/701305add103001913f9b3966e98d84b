@@ -1,0 +1,24 @@
+'''
+Created on Dec 19, 2018
+@author: Krishnakanth M
+'''
+#Queue using array
+class Queue:
+    
+    def __init__(self):
+        self.q = [];
+        self.front=0;
+        self.rear=-1;
+        
+        
+    def enqueue(self,data):
+        self.q.append(data);
+        
+    def dequeue(self):
+    
+    def size(self):
+        return self.q.__len__();
+        
+    def isEmpty(self):
+        return len(self.q)==0;
+        

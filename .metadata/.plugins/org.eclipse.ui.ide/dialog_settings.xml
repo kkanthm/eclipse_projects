@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\Apps\KK_Workspace_JPP\Python_Coding"/>
+	</list>
 	<section name="CleanDialogSettings">
 		<item value="662" key="DIALOG_WIDTH"/>
 		<item value="false" key="TOGGLE_SELECTED"/>
@@ -12,6 +15,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\Apps\KK_Workspace_JPP\Python_Coding"/>
 			<item value="E:\Apps\KK_Workspace_JPP\stacktest"/>
 			<item value="E:\Homeworks\Java\Homework_11\Factorial"/>
 			<item value="C:\Users\Krishnakanth M\Google Drive\Case studies\TimeTableGenerationSystem"/>

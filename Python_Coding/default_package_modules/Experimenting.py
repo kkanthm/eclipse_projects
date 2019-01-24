@@ -669,3 +669,52 @@
 '''
 
 '''
+# lsit = [1,2,3,4,5];
+# n=len(lsit)
+# for i in range(n-1,-1,-1):
+#     print(lsit[i])
+# string='krishna';
+# string[4]='d';
+# multiarray = [[0]*6]*6;
+# # print(multiarray)
+# print(multiarray)
+# l=[1,2,1,3,4,4]
+# print(max(l))
+# d={}
+# a,b=1,2
+# d.setdefault(a);
+# d.setdefault(b)
+# print(d)
+# d={}
+# d[1]=1
+# d[2]=2
+# d[3]=3
+# d[4]=4
+# d[5]=4
+# maxVal = max(d.values())
+# l=[1,2,3,3,4]
+# q=[1,2,3,4]
+# print(set(l)==set(q))
+# string='krishna';
+# string[4]='d';
+# print(string)
+# 
+# def take(s):
+#     return s;
+# s='krishna'
+# print(take(s))
+# d={0:'',1:'',2:'ABC',3:'DEF',4:'GHI',5:'JKL',6:'MNO',7:'PQRS',8:'TUV',9:'WXYZ'};
+# print(d[9])
+# N,M = 4,7
+# screen = [[0 for x in range(M)] for y in range(N)];
+# print(screen)
+# temp = list(map(int,'7 5 3 5 6 2 9 1 2 7 0 9 3 6 0 6 2 6 1 8 7 9 2 0 2 3 7 5'.split()))
+# count=-1;
+# for i in range(N):
+#     for j in range(M):
+#         count=count+1
+#         screen[i][j]=temp[count];
+# print(screen)      
+# print(screen[2][0])
+string = 'ABCDEF'
+print(string[5:6])

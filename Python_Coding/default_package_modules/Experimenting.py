@@ -716,5 +716,37 @@
 #         screen[i][j]=temp[count];
 # print(screen)      
 # print(screen[2][0])
-string = 'ABCDEF'
-print(string[5:6])
+# num=4;
+# string = (str(num)+' ')*4
+# print(string)
+# print()
+# path1=[]
+# path2=[]
+# print(path1==None)
+# for a in range(1,1):
+#     print(a);
+# import math
+# result = math.pow(3125,1/5)
+# print(result)
+# print(bin(23))
+# b='krishna'
+# b=list(b)
+# l=[2,72,2,5,8]
+# print(l-[2])
+from collections import namedtuple
+
+
+
+Point = namedtuple('Point','x y');
+Tromino = namedtuple('Trominoe', 'position q')
+pt = Point(4,5)
+t = Tromino(pt,3)
+print(t[0],t[1])
+
+
+
+
+
+
+
+

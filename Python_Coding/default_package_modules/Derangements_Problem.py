@@ -1,7 +1,7 @@
 '''
-Created on Jan 29, 2019
-@author: Krishnakanth Mamidipelly
-COSC 5313 Program #1
+Created on Sep 6 2019
+@author: Manohar Goud Balagonu
+Analysis of Algorithms Program #1
 Derangement Probability Computation
 Recursive Algorithm
 The program is producing the expected correct outputs
